@@ -1,23 +1,26 @@
-public static void main(String[] args) {
-    System.out.println("---Minha televisão---");
+package aula2;
 
-    Televisao tv = new Televisao();
+class Main{
+    public static void main(String[] args) {
+        System.out.println("--- Minha televisão ---");
 
-    System.out.println("Canal: " + tv.getCanal());
-    System.out.println("Volume: " + tv.getVolume());
-    System.out.println("Ligado: " + tv.getLigado());
+        Televisao tv = new Televisao();
 
-    // Alterando os dados do objeto tv (forma direta)
-    //tv.canal = 30;
-    tv.setCanal(50);
-    //tv.volume = 1000;
-    tv.setVolume(100);
-    //tv.ligado = true;
-    tv.setLigado(true);
+        // Exibindo os valores iniciais
+        System.out.println("Canal: " + tv.getCanal());
+        System.out.println("Volume: " + tv.getVolume());
+        System.out.println("Ligado: " + tv.isLigado());
 
-    System.out.println("\n------------------------------------\n");
+        // Alterando os dados usando os métodos modificadores (setters)
+        tv.setCanal(50);
+        tv.setVolume(100);
+        tv.setLigado(true);
 
-    System.out.println("Canal: " + tv.getCanal());
-    System.out.println("Volume: " + tv.getVolume());
-    System.out.println("Ligado: " + tv.getLigado());
+        System.out.println("\n-------------------------\n");
+
+        // Exibindo os novos valores alterados
+        System.out.println("Canal: " + tv.getCanal());
+        System.out.println("Volume: " + tv.getVolume());
+        System.out.println("Ligado: " + tv.isLigado());
+    }
 }
